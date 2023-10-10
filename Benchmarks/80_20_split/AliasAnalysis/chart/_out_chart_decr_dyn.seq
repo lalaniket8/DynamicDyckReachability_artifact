@@ -1,0 +1,15 @@
+NodeCount:51356
+EdgeTypeCount:3132
+EdgeCount_initgraph:44501
+insertEdgeOperationCount:0
+deleteEdgeOperationCount:35600
+TotalElapsedTime:2.16289
+Primary componenets:438
+Total components:48573
+totalNodeBroken:3161619
+MAX_COMP_SIZE:0
+SUM_COMP_SIZE:0
+NO_OF_COMP:0
+avgWorklistSize_for_delete:0
+AvgPrimaryCompSize:1.05671
+AvgPrimaryCompSize_havingSizeGreaterThan1:7.29224

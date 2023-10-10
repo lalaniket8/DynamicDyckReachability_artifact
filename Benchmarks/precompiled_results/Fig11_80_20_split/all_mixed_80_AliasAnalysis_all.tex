@@ -1,0 +1,95 @@
+\documentclass{article}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\begin{document}
+
+\def\plotheight{8cm}
+\def\barwidth{4.5pt}
+\def\bardistance{1pt}
+\def\scaleboxvalue{1}
+\def\offlinecolor{black!10}
+\def\ddLogcolor{black!50}
+\def\dynamiccolor{black!80}
+\pgfplotsset{very tick label/.append style={font=\small}}
+\def\RatioDataDep{.9}
+\def\PlotWidthDataDep{12cm}
+\def\PlotWidthAliasAnalysis{6.5cm}
+\def\RatioAliasAnalysis{.38}
+
+\begin{figure}%{\RatioDataDep\textwidth}
+\scalebox{\scaleboxvalue}{%
+\begin{tikzpicture}%[tight background, inner sep=2pt,]
+\begin{axis}[%inner sep=2pt,
+		%title={\large \underline{<<AnalysisType>>}}, %DataDep AliasAnalysis
+        ybar=\bardistance,
+		enlarge y limits={abs=0.6cm,upper},
+		enlarge x limits={abs=8pt},
+		legend style={legend pos=north west, draw=black, legend columns=-1,/tikz/every even column/.append style={column sep=0.2cm}},
+		ylabel near ticks,
+    ylabel={microsecs},
+		xtick pos=left,
+    xtick={1,2,3,4,5,6,7,8,9,10,11}, %1,2,3,4,...
+    xticklabels={antlr,bloat,chart,eclipse,fop,hsqldb,jython,luindex,lusearch,pmd,xalan},%benchmark names
+    ymajorgrids=true,
+    grid style=dashed,
+		width=\PlotWidthDataDep,
+		height=\plotheight,
+    legend style={font=\footnotesize},
+    xticklabel style={font=\footnotesize,rotate=45,anchor=east},
+    yticklabel style={font=\footnotesize},
+    ylabel style={font=\footnotesize},
+    bar width=\barwidth,
+    ymode=log,
+    log origin=infty,
+]
+
+\addplot [fill=\offlinecolor] coordinates {
+(1,34364.1259805643)
+(2,36473.4082000212)
+(3,75508.1460674157)
+(4,34639.3414606358)
+(5,66258.785942492)
+(6,31582.2027627035)
+(7,38488.9759429461)
+(8,32329.548171169)
+(9,34359.2002318169)
+(10,35951.5457623356)
+(11,32081.2484518207)
+};
+\addplot [fill=\ddLogcolor] coordinates {
+(1,25204.5066001054)
+(2,22347.1517120458)
+(3,110689.576571405)
+(4,25455.1394408682)
+(5,72359.3241801917)
+(6,26348.0915895412)
+(7,22941.8014280046)
+(8,25287.4786506694)
+(9,25524.9527018835)
+(10,23565.3764971971)
+(11,27145.1032356329)
+};
+\addplot [fill=\dynamiccolor] coordinates {
+(1,18.1605783866058)
+(2,42.4088886534591)
+(3,94.0733146067416)
+(4,42.8467016064715)
+(5,60.1354632587859)
+(6,47.8979403058707)
+(7,42.3812465471347)
+(8,44.6218622997848)
+(9,45.5319037960012)
+(10,44.4546261863795)
+(11,47.9864998761457)
+};
+\legend{Offline,DDLog,Dynamic}
+
+\end{axis}
+\end{tikzpicture}
+}
+\caption{./precompiled\_results/Fig11\_80\_20\_split/all\_mixed\_80\_AliasAnalysis\_all.tex}
+\end{figure}
+\end{document}

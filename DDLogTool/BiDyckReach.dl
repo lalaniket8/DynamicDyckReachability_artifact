@@ -1,0 +1,6 @@
+input relation NODE(id: u32)
+input relation CP(edge: u32, source: u32, dest: u32)
+output relation S(n1: u32, n2: u32)
+S(x, x) :- NODE(x).
+S(x, y) :- S(x,z), S(z,y).
+S(x, z) :- CP(i, a, x), S(a, b), CP(i, b, z).

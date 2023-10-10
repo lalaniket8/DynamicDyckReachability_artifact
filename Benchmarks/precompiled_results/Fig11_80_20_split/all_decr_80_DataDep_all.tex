@@ -1,0 +1,107 @@
+\documentclass{article}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\begin{document}
+
+\def\plotheight{8cm}
+\def\barwidth{4.5pt}
+\def\bardistance{1pt}
+\def\scaleboxvalue{1}
+\def\offlinecolor{black!10}
+\def\ddLogcolor{black!50}
+\def\dynamiccolor{black!80}
+\pgfplotsset{very tick label/.append style={font=\small}}
+\def\RatioDataDep{.9}
+\def\PlotWidthDataDep{12cm}
+\def\PlotWidthAliasAnalysis{6.5cm}
+\def\RatioAliasAnalysis{.38}
+
+\begin{figure}%{\RatioDataDep\textwidth}
+\scalebox{\scaleboxvalue}{%
+\begin{tikzpicture}%[tight background, inner sep=2pt,]
+\begin{axis}[%inner sep=2pt,
+		%title={\large \underline{<<AnalysisType>>}}, %DataDep AliasAnalysis
+        ybar=\bardistance,
+		enlarge y limits={abs=0.6cm,upper},
+		enlarge x limits={abs=8pt},
+		legend style={legend pos=north west, draw=black, legend columns=-1,/tikz/every even column/.append style={column sep=0.2cm}},
+		ylabel near ticks,
+    ylabel={microsecs},
+		xtick pos=left,
+    xtick={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}, %1,2,3,4,...
+    xticklabels={btree,check,compiler,compress,crypto,derby,helloworld,mpegaudio,mushroom,parser,sample,scimark,startup,sunflow,xml},%benchmark names
+    ymajorgrids=true,
+    grid style=dashed,
+		width=\PlotWidthDataDep,
+		height=\plotheight,
+    legend style={font=\footnotesize},
+    xticklabel style={font=\footnotesize,rotate=45,anchor=east},
+    yticklabel style={font=\footnotesize},
+    ylabel style={font=\footnotesize},
+    bar width=\barwidth,
+    ymode=log,
+    log origin=infty,
+]
+
+\addplot [fill=\offlinecolor] coordinates {
+(1,615.777935943061)
+(2,1824.1751720864)
+(3,1395.87804878049)
+(4,1404.05604719764)
+(5,2134.18650793651)
+(6,2057.64186633039)
+(7,1372.35905511811)
+(8,3125.31948881789)
+(9,307.680061823802)
+(10,600.414262820513)
+(11,309.374812593703)
+(12,1549.26051368896)
+(13,1791.35802469136)
+(14,1330.44510385757)
+(15,10443.1631816318)
+};
+\addplot [fill=\ddLogcolor] coordinates {
+(1,181.755116725979)
+(2,182.768292190838)
+(3,166.507254573171)
+(4,170.830960176991)
+(5,192.265155952381)
+(6,194.442153846154)
+(7,214.232792755906)
+(8,191.390582401491)
+(9,177.345530139104)
+(10,177.810921474359)
+(11,182.125631184408)
+(12,181.191264747389)
+(13,199.137743535989)
+(14,180.546127596439)
+(15,218.007740211152)
+};
+\addplot [fill=\dynamiccolor] coordinates {
+(1,1.15373665480427)
+(2,1.52836458580584)
+(3,1.34481707317073)
+(4,1.31533923303835)
+(5,2.55059523809524)
+(6,1.77406473308113)
+(7,1.24850393700787)
+(8,2.05710862619808)
+(9,1.0)
+(10,1.03605769230769)
+(11,0.895052473763119)
+(12,1.27293254304262)
+(13,1.38318192406243)
+(14,1.31981536432575)
+(15,19.0873308733087)
+};
+\legend{Offline,DDLog,Dynamic}
+
+\end{axis}
+\end{tikzpicture}
+}
+\caption{./precompiled\_results/Fig11\_80\_20\_split/all\_decr\_80\_DataDep\_all.tex}
+\end{figure}
+\end{document}

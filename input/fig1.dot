@@ -1,0 +1,6 @@
+c->g[label="cp--R"]
+g->e[label="cp--L"]
+f->d[label="cp--L"]
+f->c[label="cp--L"]
+f->e[label="cp--L"]
+h->f[label="cp--L"]
