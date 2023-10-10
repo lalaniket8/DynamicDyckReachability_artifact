@@ -27,7 +27,7 @@ This readme is divided into following sections:
 ## Brief description
 Implementation of paper *On-The-Fly Static Analysis via Dynamic Bidirected Dyck Reachability*
 
-Artifact repository is also maintained on [GithubRepo].
+This artifact is also maintained in a public [GithubRepo].
 
 The DynamicBidirectedDyckReachability Tool accepts an initial graph and a sequence of update edge operations as input. It then calculates Bidirected Dyck reachability among nodes after executing the specified update operations on the initial graph.
 
@@ -54,8 +54,7 @@ Edges in the above files can be commented by preceeding the line with '#' charac
 
 ### Installing the artifact
 
-1. Download artifact from [Zenodo]
-2. Extract DynamicDyckReachability_POPL24.zip to obtain Virtual machine image. Following are VM Image details:
+1. Extract `DynamicDyckReachability_Artifact_POPL24.tar.xz` to obtain the Virtual machine image `DynamicDyckReachability_Artifact_POPL24.ova` from the Zernodo archive. Following are VM Image details:
     - Name: DynamicDyckReachability_Artifact_POPL24
     - Host OS: Ubuntu 64 bit
     - RAM: 8 GB
@@ -63,12 +62,12 @@ Edges in the above files can be commented by preceeding the line with '#' charac
     - Secondary Storage: 30GB
     - Username : user
     - Password : user
-3. Open VirtualBox (the provided ova file can be executed on any supported Virtual Machine software, we provide instructuions pertaining to VirtualBox software) 
-4. Navigate to File -> Import Appliance -> Select provided ova file
-5. Choose the desired setting of RAM (we recommend 8GB or more) and No of CPUs
-6. Click Import
-7. Once import is complete, select the VM and click "Start"
-8. Login using above username and password
+2. Open VirtualBox (the provided ova file can be executed on any supported Virtual Machine software, we provide instructuions pertaining to VirtualBox software) 
+3. Navigate to File -> Import Appliance -> Select provided ova file
+4. Choose the desired setting of RAM (we recommend 8GB or more) and No of CPUs
+5. Click Import
+6. Once import is complete, select the VM and click "Start"
+7. Login using above username and password
 
 ### Building the tool
 
@@ -393,6 +392,5 @@ The provided can be easily incorporated in different codebase and above methods 
    [Chatterjee et al. 2018]: <https://dl.acm.org/doi/10.1145/3158118>
    [Holm et al. 2001]: <https://doi.org/10.1145/502090.502095>
    [Tseng 2020]: <https://github.com/tomtseng/dynamic-connectivity-hdt>
-   [GithubRepo]: <https://github.com/lalaniket8/DynamicDyckReachability_artifact>
    [Differential Datalog]: <https://github.com/vmware/differential-datalog>
-   [Zenodo]: <https://zenodo.org/record/8405641>
+   [GithubRepo]: <https://github.com/lalaniket8/DynamicDyckReachability_artifact>
