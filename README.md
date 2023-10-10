@@ -393,6 +393,6 @@ The provided can be easily incorporated in different codebase and above methods 
    [Chatterjee et al. 2018]: <https://dl.acm.org/doi/10.1145/3158118>
    [Holm et al. 2001]: <https://doi.org/10.1145/502090.502095>
    [Tseng 2020]: <https://github.com/tomtseng/dynamic-connectivity-hdt>
-   [GithubRepo]: <https://github.com/lalaniket8/DynamicDyckConnectivity_v1/tree/artifact>
+   [GithubRepo]: <https://github.com/lalaniket8/DynamicDyckReachability_artifact>
    [Differential Datalog]: <https://github.com/vmware/differential-datalog>
    [Zenodo]: <https://zenodo.org/record/8405641>
